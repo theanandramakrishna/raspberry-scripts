@@ -6,7 +6,7 @@ pwd=$3
 echo ssh > "$bootpath"/ssh
 
 #supply wifi connection details on first boot
-cat "$bootpath"/wpa_supplicant.conf <<EOF
+cat >"$bootpath"/wpa_supplicant.conf <<EOF
 country=us
 update_config=1
 ctrl_interface=/var/run/wpa_supplicant
